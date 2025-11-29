@@ -1,0 +1,25 @@
+{
+  "name": "aoc-2024",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "debug": "^4.4.3",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/node": "^22.6.2",
+    "eslint": "^9.39.1",
+    "prettier": "^3.7.3",
+    "ts-node": "^10.9.2",
+    "vitest": "^4.0.14"
+  }
+}
