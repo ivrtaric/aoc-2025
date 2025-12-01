@@ -1,0 +1,34 @@
+module.exports = {
+  root: true,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module'
+  },
+  env: {
+    node: true,
+    es2021: true
+  },
+  plugins: ['@typescript-eslint', 'prettier', 'simple-import-sort'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended' // Prettier plugin
+  ],
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        semi: true,
+        singleQuote: true,
+        trailingComma: 'none',
+        arrowParens: 'avoid',
+        printWidth: 100,
+        tabWidth: 2,
+        useTabs: false
+      }
+    ],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error'
+  }
+};

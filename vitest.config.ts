@@ -1,8 +1,13 @@
-/// <reference types="vitest/config" />
+import tsconfigPaths from 'vite-tsconfig-paths';
 import { configDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig({
-	test: {
-		exclude: [...configDefaults.exclude]
-	}
+  plugins: [tsconfigPaths()],
+  test: {
+    environment: 'node',
+    exclude: [...configDefaults.exclude],
+    // include: ['**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    globals: true,
+    root: '.'
+  }
 });

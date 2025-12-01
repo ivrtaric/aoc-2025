@@ -1,22 +1,24 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "declaration": true,
+    "declarationMap": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
-    "inlineSources": true,
-    "lib": ["ESNext"],
+    "incremental": true,
     "module": "commonjs",
-    "noImplicitAny": true,
-    "outDir": "dist",
+    "moduleResolution": "node",
+    "outDir": "./dist",
     "paths": {
-      "src/*": ["./src/*"],
-      "test/*": ["./test/*"]
+      "src/*": ["src/*"],
+      "test/*": ["test/*"]
     },
-    "resolveJsonModule": true,
+    "removeComments": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "strict": true,
-    "target": "ES2022"
+    "target": "es2021"
   },
   "include": ["src/**/*.ts", "test/**/*.ts"],
   "exclude": ["node_modules"]
