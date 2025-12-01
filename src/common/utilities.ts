@@ -29,7 +29,7 @@ export const parseFile = async <T>(
   return resultsPerLine;
 };
 
-const FIXTURE_FOLDER = path.join(__dirname, '..', '..', '..', 'test', 'fixtures');
+const FIXTURE_FOLDER = path.join(__dirname, '..', '..', 'test', 'fixtures');
 export function getFixtureStream(fileName: string): ReadStream {
   const fullPath = path.join(FIXTURE_FOLDER, fileName);
   if (!existsSync(fullPath)) {

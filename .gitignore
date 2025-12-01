@@ -2,4 +2,4 @@
 dist/
 node_modules/
 tsconfig.build.tsbuildinfo
-**/warm-up/**/*
+test/fixtures/**/*own-input*
