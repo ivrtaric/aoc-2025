@@ -1,4 +1,4 @@
-import { lobby } from 'src/03/part2';
+import { printingDepartment } from 'src/04/part2';
 import { getFixtureStream } from 'test/utilities';
 import { describe, expect, it } from 'vitest';
 
@@ -6,13 +6,13 @@ import { dir, EXPECTED_EXAMPLE_RESULT_2, title } from './constants';
 
 describe(`AoC 2025 / ${title} / Part #2`, () => {
   it(`should return ${EXPECTED_EXAMPLE_RESULT_2} for the first puzzle input file`, async () => {
-    const result = await lobby(getFixtureStream(`2025-${dir}-example.txt`));
+    const result = await printingDepartment(getFixtureStream(`2025-${dir}-example.txt`));
 
     expect(result).toEqual(EXPECTED_EXAMPLE_RESULT_2);
   });
 
   it('should return ?? for the second puzzle input file', async () => {
-    const result = await lobby(getFixtureStream(`2025-${dir}-own-input.txt`));
+    const result = await printingDepartment(getFixtureStream(`2025-${dir}-own-input.txt`));
 
     expect(result).toEqual(Infinity);
   });

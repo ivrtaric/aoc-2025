@@ -11,3 +11,5 @@ export function getFixtureStream(fileName: string): ReadStream {
 
   return createReadStream(fullPath, { encoding: 'utf8' });
 }
+
+export const container = (dirname: string) => dirname.split('/').pop();

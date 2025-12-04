@@ -2,7 +2,7 @@ import { createReadStream, existsSync, ReadStream } from 'fs';
 import * as path from 'path';
 import * as readline from 'readline';
 
-import type { Location } from './types';
+import type { Location, MappedArea } from './types';
 
 export const keyOf = ([x, y]: Location): string => `${x},${y}`;
 
@@ -39,3 +39,6 @@ export function getFixtureStream(fileName: string): ReadStream {
   console.log(`Loading from file ${fullPath}`);
   return createReadStream(fullPath, { encoding: 'utf8' });
 }
+
+export const isValidLocation = <T>([row, column]: Location, board: MappedArea<T>): boolean =>
+  row >= 0 && column >= 0 && row < board.length && column < board[row].length;
