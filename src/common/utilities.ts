@@ -8,6 +8,8 @@ export const keyOf = ([x, y]: Location): string => `${x},${y}`;
 
 export const xor = (a: boolean, b: boolean): boolean => (a && !b) || (!a && b);
 
+export const inRange = <T>(n: T, [from, to]: [T, T]): boolean => n >= from && n <= to;
+
 export const loadLines = async (inputFileStream: ReadStream): Promise<Array<string>> =>
   parseFile<string>(inputFileStream, (line: string, index: number) => line);
 export const parseFile = async <T>(
